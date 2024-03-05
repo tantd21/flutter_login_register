@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/scheduler.dart';
 import 'core/app_export.dart';
 import 'package:thi_don_s_application2/dbHelper/mongodb.dart';
+
 
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
@@ -27,9 +27,10 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           theme: theme,
           title: 'thi_don_s_application2',
-          debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.welcomeScreen,
-          routes: AppRoutes.routes,
+            debugShowCheckedModeBanner: false,
+            initialRoute: AppRoutes.welcomeScreen,
+            routes: AppRoutes.routes,
+            // home: RegisterScreen(),
         );
       },
     );
