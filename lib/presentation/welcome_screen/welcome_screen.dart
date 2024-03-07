@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:thi_don_s_application2/core/app_export.dart';
-import 'package:thi_don_s_application2/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:thi_don_s_application2/widgets/custom_elevated_button.dart';
 import 'package:thi_don_s_application2/widgets/custom_outlined_button.dart';
 

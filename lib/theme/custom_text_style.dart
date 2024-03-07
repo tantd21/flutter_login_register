@@ -40,6 +40,7 @@ class CustomTextStyles {
 }
 
 extension on TextStyle {
+  // ignore: unused_element
   TextStyle get urbanist {
     return copyWith(
       fontFamily: 'Urbanist',
