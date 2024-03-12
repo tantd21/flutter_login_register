@@ -8,6 +8,7 @@ import 'package:thi_don_s_application2/theme/theme_helper.dart';
 
 class CustomTextStyles {
   // Title text style
+  
   static get titleSmallCyan400 => theme.textTheme.titleSmall!.copyWith(
         color: appTheme.cyan400,
         fontWeight: FontWeight.w700,
@@ -37,6 +38,34 @@ class CustomTextStyles {
         color: Color(0XFF34C2C1),
         fontWeight: FontWeight.w700,
       );
+        static get bodyLargeBluegray400 => theme.textTheme.bodyLarge!.copyWith( color: appTheme.blueGray400,
+);
+static get bodyLarge_1 => theme.textTheme.bodyLarge!;
+static get bodyMediumBluegray400 => theme.textTheme.bodyMedium!.copyWith( color: appTheme.blueGray400,
+fontSize: 15.fSize,
+);
+static get bodyMediumBluegray400_1 => theme.textTheme.bodyMedium!.copyWith( color: appTheme.blueGray400,
+);
+static get bodyMedium_1 => theme.textTheme.bodyMedium!;
+static get bodyMedium_2 => theme.textTheme.bodyMedium!;
+static get bodyMedium_3 => theme.textTheme.bodyMedium!;
+static get bodySmall10 => theme.textTheme.bodySmall!.copyWith(
+fontSize: 10.fSize,
+);
+static get bodySmall10_1 => theme.textTheme.bodySmall!.copyWith(
+fontSize: 10.fSize,
+);
+static get bodySmallGray900 => theme.textTheme.bodySmall!.copyWith(
+color: appTheme.gray900,
+);
+}
+extension on TextStyle {
+TextStyle get sFProDisplay {
+return copyWith(
+fontFamily: 'SF Pro Display',
+);
+}
+      
 }
 
 extension on TextStyle {

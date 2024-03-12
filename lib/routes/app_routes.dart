@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thi_don_s_application2/presentation/home_screen_dart/home_screen.dart';
 import '../presentation/welcome_screen/welcome_screen.dart';
 import '../presentation/login_screen/login_screen.dart';
 import '../presentation/register_screen/register_screen.dart';
@@ -13,11 +14,15 @@ class AppRoutes {
 
   static const String appNavigationScreen = '/app_navigation_screen';
 
+  static const String homeScreen = '/home_screen';
+
   static Map<String, WidgetBuilder> routes = {
     welcomeScreen: (context) => WelcomeScreen(),
     loginScreen: (context) => LoginScreen(),
     registerScreen: (context) => RegisterScreen(),
-    appNavigationScreen: (context) => AppNavigationScreen()
+    appNavigationScreen: (context) => AppNavigationScreen(),
+    homeScreen : (context) => HomeScreen()
+
   };
 
     // Hàm để điều hướng đến màn hình đăng nhập

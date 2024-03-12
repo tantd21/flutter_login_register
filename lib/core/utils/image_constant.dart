@@ -10,6 +10,12 @@ class ImageConstant {
   // Login images
   static String imgFluenteye20filled = '$imagePath/img_fluenteye20filled.svg';
 
+  static String imgClock = '$imagePath/img_clock.svg';
+
+    static String imgThumbsUp = '$imagePath/img_thumbs_up.svg';
+
+    static String imgPlus = '$imagePath/img_plus.svg';
+
   // Common images
   static String imgArrowLeft = '$imagePath/img_arrow_left.svg';
 

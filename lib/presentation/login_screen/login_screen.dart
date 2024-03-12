@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thi_don_s_application2/dbHelper/mongodb.dart';
+import 'package:thi_don_s_application2/presentation/home_screen_dart/home_screen.dart';
 import 'package:thi_don_s_application2/widgets/app_bar/custom_app_bar.dart';
 import 'package:thi_don_s_application2/widgets/custom_text_form_field.dart';
 import 'package:thi_don_s_application2/widgets/custom_elevated_button.dart';
@@ -89,7 +90,7 @@ class LoginScreen extends StatelessWidget {
     if (user != null && user.password == password) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => WelcomeScreen()),
+        MaterialPageRoute(builder: (context) => HomeScreen()),
       );
     } else {
       showDialog(

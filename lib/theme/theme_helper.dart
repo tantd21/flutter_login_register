@@ -143,6 +143,12 @@ class PrimaryColors {
   Color get gray100 => Color(0XFFF6F7F8);
   Color get gray50 => Color(0XFFF7F8F9);
   Color get gray600 => Color(0XFF6A707C);
+  Color get gray900 => Color(0XFF6A707C);
+    Color get gray300 => Color(0XFFF7F8F9);
+
+
+
+
 
   // White
   Color get whiteA700 => Color(0XFFFFFFFF);

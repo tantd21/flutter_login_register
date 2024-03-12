@@ -10,7 +10,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.leading,
     this.title,
     this.centerTitle,
-    this.actions,
+    this.actions, 
+    this.styleType,
   }) : super(
           key: key,
         );
@@ -27,6 +28,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   final List<Widget>? actions;
 
+  final Style? styleType;
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -34,6 +37,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: height ?? 56.v,
       automaticallyImplyLeading: false,
       backgroundColor: Colors.transparent,
+      flexibleSpace: _getStyle(),
       leadingWidth: leadingWidth ?? 0,
       leading: leading,
       title: title,
@@ -48,4 +52,24 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         SizeUtils.width,
         height ?? 56.v,
       );
+_getStyle() {
+switch (styleType) {
+case Style.bgoutline:
+return Container(
+height: 64.v,
+width: double.maxFinite,
+decoration: BoxDecoration(
+border: Border(
+top: BorderSide(
+color: appTheme.gray100,
+width: 1.h,
+),
+),
+),
+);
+default:
+return null;
+}}}
+enum Style {
+bgoutline,
 }
