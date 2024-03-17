@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:thi_don_s_application2/core/app_export.dart';
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:thi_don_s_application2/widgets/custom_floating_button.dart';
+import 'package:intl/intl.dart';
 // ignore for_file: must be_immutable
 class HomeScreen extends StatelessWidget {
 HomeScreen({Key? key})
@@ -121,135 +122,122 @@ text: "Dashboard",
 styleType: Style.bgoutline,
 );
 }
-
-
-
-
-
-
 /// Section Widget
 Widget _buildTwo(BuildContext context) {
-return Container(
-margin: EdgeInsets.symmetric (horizontal: 20.h),
-padding: EdgeInsets.symmetric(
-horizontal: 30.h,
-vertical: 17.v,
-),
-decoration: AppDecoration.outlineGray.copyWith(
-  borderRadius: BorderRadiusStyle.roundedBorder5,
-),
-child: Column (
-mainAxisSize: MainAxisSize.min,
-children: [
-Padding(
-padding: EdgeInsets.only(
-left: 11.h,
-right: 19.h,
-),
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: [
-Column(
-children: [
-CustomImageView(
-imagePath: ImageConstant.imgClock,
-height: 18.adaptSize,
-width: 18.adaptSize,
-),
-SizedBox(height: 7.v),
-Text (
-"John D.",
-style: CustomTextStyles.bodyMediumBluegray400,
-),
-],
-),
-Spacer (
-flex: 45,
-),
-Column(
-children: [
-CustomImageView(
-imagePath: ImageConstant.imgThumbsUp,
-height: 18.adaptSize,
-width: 18.adaptSize,
-),
-SizedBox(height: 9.v),
-Text(
-"Mon, Aug 12",
-style: CustomTextStyles.bodyMediumBluegray400,
-),
-],
-),
-Spacer (
-flex: 54,
-),
-Column(
-children: [
-CustomImageView(
-imagePath: ImageConstant.imgClock,
-height: 18.adaptSize,
-width: 18.adaptSize,
-),
-SizedBox(height: 7.v),
-Text(
-"1 PM",
-style: CustomTextStyles.bodyMediumBluegray400,
-),
-],
-),
-],
-),
-),
-SizedBox(height: 16.v),
-Divider(),
-SizedBox(height: 17.v),
-Padding(
-padding: EdgeInsets.only(right: 7.h),
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: [
-Text(
-"Reschedule",
-style: theme.textTheme.bodyMedium,
-),
-Padding(
-padding: EdgeInsets.only(left: 28.h),
-child: SizedBox(
-height: 17.v,
-child: VerticalDivider(
-width: 1.h,
-thickness: 1.v,
-),
-),
-),
-Padding(
-padding: EdgeInsets.only(left: 27.h),
-child: Text(
-"Add Service",
-style: theme.textTheme.bodyMedium,
-),
-),
-Padding(
-padding: EdgeInsets.only(left: 26.h),
-child: SizedBox(
-height: 17.v,
-child: VerticalDivider(
-width: 1.h,
-thickness: 1.v,
-),
-),
-),
-Spacer(),
-Text(
-"Add Note",
-style: theme.textTheme.bodyMedium,
-),
-],
-),
-),
-],
-),
-);
+  // Lấy ngày tháng hiện tại
+  String currentDate = DateFormat.yMMMMd().format(DateTime.now());
+
+  return Container(
+    margin: EdgeInsets.symmetric(horizontal: 20.h),
+    padding: EdgeInsets.symmetric(horizontal: 30.h, vertical: 17.v),
+    decoration: AppDecoration.outlineGray.copyWith(
+      borderRadius: BorderRadiusStyle.roundedBorder5,
+    ),
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: 11.h, right: 19.h),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  CustomImageView(
+                    imagePath: ImageConstant.imgClock,
+                    height: 18.adaptSize,
+                    width: 18.adaptSize,
+                  ),
+                  SizedBox(height: 7.v),
+                  Text(
+                    "John D.",
+                    style: CustomTextStyles.bodyMediumBluegray400,
+                  ),
+                ],
+              ),
+              Spacer(flex: 45),
+              Column(
+                children: [
+                  CustomImageView(
+                    imagePath: ImageConstant.imgThumbsUp,
+                    height: 18.adaptSize,
+                    width: 18.adaptSize,
+                  ),
+                  SizedBox(height: 9.v),
+                  Text(
+                    currentDate, // Sử dụng ngày tháng hiện tại thay vì "Mon, Aug"
+                    style: CustomTextStyles.bodyMediumBluegray400,
+                  ),
+                ],
+              ),
+              Spacer(flex: 54),
+              Column(
+                children: [
+                  CustomImageView(
+                    imagePath: ImageConstant.imgClock,
+                    height: 18.adaptSize,
+                    width: 18.adaptSize,
+                  ),
+                  SizedBox(height: 7.v),
+                  Text(
+                    "1 PM",
+                    style: CustomTextStyles.bodyMediumBluegray400,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 16.v),
+        Divider(),
+        SizedBox(height: 17.v),
+        Padding(
+          padding: EdgeInsets.only(right: 7.h),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Reschedule",
+                style: theme.textTheme.bodyMedium,
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 28.h),
+                child: SizedBox(
+                  height: 17.v,
+                  child: VerticalDivider(
+                    width: 1.h,
+                    thickness: 1.v,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 27.h),
+                child: Text(
+                  "Add Service",
+                  style: theme.textTheme.bodyMedium,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 26.h),
+                child: SizedBox(
+                  height: 17.v,
+                  child: VerticalDivider(
+                    width: 1.h,
+                    thickness: 1.v,
+                  ),
+                ),
+              ),
+              Spacer(),
+              Text(
+                "Add Note",
+                style: theme.textTheme.bodyMedium,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
 /// Section Widget
 Widget _buildMonth(BuildContext context) {
@@ -279,7 +267,7 @@ month = value;
 ),
 );
 }
-/// Section Widget
+/// Section Widgetf
 Widget _buildCalendar (BuildContext context) {
 return SizedBox(
 height: 398.v,
